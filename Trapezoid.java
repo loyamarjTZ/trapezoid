@@ -20,11 +20,12 @@ public class Trapezoid {
 	public static void main(String[] args) {  
 	    obtainTopLength();
 		obtainBottomLength();
+		obtainFillerSymbol();
         displayTrapezoid();
 	}        
       
 	//Gets the top length of the trapezoid
-	public static void obtainTopLength()	{
+	public static void obtainTopLength() {
 		validInput = false;
 		do{
             //Prompts the user to enter the top length of the trapezoid.
@@ -44,8 +45,7 @@ public class Trapezoid {
 	}
 	
     //Gets the bottom length of the trapezoid
-	public static void obtainBottomLength()
-	{
+	public static void obtainBottomLength() {
 		validInput = false;
         do{
             //Prompts the user to enter the bottom length of the trapezoid.
@@ -63,18 +63,21 @@ public class Trapezoid {
         }while(validInput == false);
 	}
 	
-    //Displays the trapezoid to the user
-	public static void displayTrapezoid() {
-		
-        //Local variables
-		int numberOfChars = topLength;
-		int numberOfSpaces = (bottomLength-topLength)/2;
-
-        //Create a filled trapezoid with any character of choice
+	public static void obtainFillerSymbol(){
+		//Obtain the character of choice
 		System.out.println("Please enter any character: ");
 		String userInput = scan.next();
 		fillerSymbol = userInput.charAt(0);
+	}
+
+    //Displays the trapezoid to the user
+	public static void displayTrapezoid() {
+        //Local variables
+		int numberOfChars = topLength;
+		int numberOfSpaces = (bottomLength-topLength)/2;
 		
+		System.out.println("\nBelow is your trapezoid:\n");
+
         //Displays the trapezoid
 		while(numberOfSpaces>=0) {
 
@@ -88,5 +91,6 @@ public class Trapezoid {
             numberOfSpaces--;
             numberOfChars+=2;
         } 
+		System.out.println();
     }
 }
