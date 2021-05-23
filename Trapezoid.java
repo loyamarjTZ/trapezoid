@@ -18,10 +18,10 @@ public class Trapezoid {
 	
 	//Main function
 	public static void main(String[] args) {  
-	    obtainTopLength();
-		obtainBottomLength();
-		obtainFillerSymbol();
-        displayTrapezoid();
+		obtainTopLength();     //O(1)
+		obtainBottomLength();  //O(1)
+		obtainFillerSymbol();  //O(1)
+       		displayTrapezoid();    //O(n^2)
 	}        
       
 	//Gets the top length of the trapezoid
@@ -69,15 +69,15 @@ public class Trapezoid {
 		fillerSymbol = userInput.charAt(0);
 	}
 
-    //Displays the trapezoid to the user
+    	//Displays the trapezoid to the user
 	public static void displayTrapezoid() {
-        //Local variables
+        	//Local variables
 		int numberOfChars = topLength;
 		int numberOfSpaces = (bottomLength-topLength)/2;
 		
 		System.out.println("\nBelow is your trapezoid:\n");
 
-        //Displays the trapezoid
+        	//Displays the trapezoid
 		while(numberOfSpaces>=0) {
             		for (int i = numberOfSpaces; i > 0; i--)
              			System.out.print(" ");
@@ -85,10 +85,10 @@ public class Trapezoid {
             		for (int j = numberOfChars; j > 0; j--)
              			System.out.print(fillerSymbol);
             
-            System.out.println();
-            numberOfSpaces--;
-            numberOfChars+=2;
-        } 
+        		System.out.println();
+            		numberOfSpaces--;
+            		numberOfChars+=2;
+        	} 
 		System.out.println();
-    }
+    	}
 }
