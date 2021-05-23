@@ -1,6 +1,6 @@
 /*
 This program will display a trapezoid whose top and bottom lengths are determined by the user.
-The user also chooses what symbol to use to draw the trapezoid.
+The user also chooses what symbol will be used to draw the trapezoid.
 */
 
 //imports the Scanner class
@@ -18,9 +18,9 @@ public class Trapezoid {
 	
 	//Main function
 	public static void main(String[] args) {  
-		obtainTopLength();
-		obtainBottomLength();
-        	displayTrapezoid();
+		obtainTopLength();    //O(1)
+		obtainBottomLength(); //O(1)
+        	displayTrapezoid();   //
 	}        
       
 	//Gets the top length of the trapezoid
