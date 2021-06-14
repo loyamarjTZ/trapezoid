@@ -3,7 +3,7 @@ This program will display a trapezoid whose top and bottom lengths are determine
 The user also chooses what symbol will be used to draw the trapezoid.
 */
 
-//imports the Scanner class
+//imports the Scanner class 
 import java.util.Scanner;
 
 //Class definition
